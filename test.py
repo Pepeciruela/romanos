@@ -35,10 +35,10 @@ class RomanosTest(unittest.TestCase):
         self.assertRaises(OverflowError, romano_a_entero,("VV"))
     def test_repes_variadas(self):
         self.assertEqual(romano_a_entero ("MMLXXIII"), 2073)
-    def test_IC(self):
-        self.assertEqual(romano_a_entero ("IC"), 99)
-    """MMMCMMM
-    IIX"""
+    def test_MMMCMMM(self):
+        self.assertRaises(OverflowError, romano_a_entero,("MMMCMMM"))
+    def test_IIX(self):
+        self.assertRaises(OverflowError, romano_a_entero,("IIX"))    
         
 if __name__ == "__main__":
     unittest.main()        
